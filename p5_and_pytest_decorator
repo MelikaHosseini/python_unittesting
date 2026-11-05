@@ -1,0 +1,15 @@
+import p5
+import pytest
+
+@pytest.mark.A
+def  test_sum():
+    assert p5.sum(40, 40) == 80
+    assert p5.sum(20000, 2) == 100000
+@pytest.mark.B
+def test_mul():
+    assert p5.div(10000, 3) == 100000
+@pytest.mark.A    
+def test_search_to_list():
+    assert p5.search_to_list([3,3,3,3,3,23,10],30) == [3,3,3,3,3,23,10]
+    assert p5.search_to_list(['A', 'B', "C"],'D') == False
+
